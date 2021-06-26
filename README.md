@@ -43,9 +43,9 @@ Required ROS Packages:
 
 In a terminal source the ROS workspace and run:
 ```
-    ros2 launch kmr_model multi_spawn_robot_launch.py
+    ros2 launch kmr_simulation multi_kuka_launch.py
 ```
-To set up simulations in scenarios 1,2,3,4 and 6, open the multi_spawn_robot_launch.py file and set the adecuate initial position for robot 1 and robot 2. Robot 1's yaw needs to be yaw1=-1.57079633, while robot 2's yaw needs to be yaw2=0.0. Open two new terminals and souce the ros workspace in each of them. 
+To set up simulations in scenarios 1,2,3,4 and 6, open the multi_spawn_robot_launch.py file (in the kmr_model package) and set the adecuate initial position for robot 1 and robot 2. Robot 1's yaw needs to be yaw1=-1.57079633, while robot 2's yaw needs to be yaw2=0.0. Open two new terminals and souce the ros workspace in each of them. 
 
 If the algorithm with communication wants to be tested, in one terminal run:
 ```
@@ -64,7 +64,7 @@ and and in the other:
     ros2 run kmr_navigation CAE_kuka2.py
 ```
 
-To set up simulations in scenario 5, open the multi_spawn_robot_launch.py file and set the adecuate initial position for robot 1 and robot 2. Robot 1's yaw needs to be yaw1=3.14159265, while robot 2's yaw needs to be yaw2=0.0. Open two new terminals and souce the ros workspace in each of them. 
+To set up simulations in scenario 5, open the multi_spawn_robot_launch.py file (in the kmr_model package) and set the adecuate initial position for robot 1 and robot 2. Robot 1's yaw needs to be yaw1=3.14159265, while robot 2's yaw needs to be yaw2=0.0. Open two new terminals and souce the ros workspace in each of them. 
 
 If the algorithm with communication wants to be tested, in one terminal run:
 ```
@@ -83,9 +83,7 @@ and and in the other:
     ros2 run kmr_navigation CAE_kuka2.py
 ```
 
-To change the simulation environment, open the gazebo.launch.py file, and change the variable word to the desired environment model (one of the SDF world models contained in the folder world).
-
-To change the launched robot model, open the xml file of the launched simulation environment, and change the spawned robot model.
+To change the simulation environment, open the start_world_launch.py file, and change the variable word to the desired environment model (one of the SDF world models contained in the folder world of the kmr_simulation package).
  
    
   
