@@ -35,20 +35,9 @@ endif()
 
 install(
   PROGRAMS
-      files/keyboard1.py
-      files/keyboard2.py
-      files/navigate_point_scan1.py
-      files/navigate_point_scan2.py
-      files/navigate_waypoint_scan1.py
-      files/navigate_waypoint_scan2.py
-      files/trajectory_kuka1.py
-      files/trajectory_kuka2.py
       files/CA_kuka1.py
       files/CA_kuka1_EFH.py
       files/CA_kuka2.py
-      files/CAET_kuka1.py
-      files/CAET_kuka1_EFH.py
-      files/CAET_kuka2.py
       files/CAE_kuka1.py
       files/CAE_kuka1_EFH.py
       files/CAE_kuka2.py
