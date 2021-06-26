@@ -27,38 +27,60 @@ Required ROS Packages:
   ## 2. Guide
   The repository contains the following packages:
   
-   -  kmr_navigation2
+   -  kmr_model
   
-  This package handles navigation of the KMR iiwa robot.
+  This package contains an SDF model of the KMR robot. It is in charge of spawnning two robots in Gazebo when starting a simulation.
   
-  -  kmr_simulation
+  -  kmr_navigation
+
+ This package handles navigation of the KMR iiwa robot. It contains the collsion avoidance algorithms: CA\_kuka (with communication) and CAE\_kuka (without communication).
   
-  This package sets up the simulations in Gazebo. 
+ -  kmr_simulation
+
+ This package sets up the simulation environment in Gazebo.
   
   ## 3. Run
 
 In a terminal source the ROS workspace and run:
 ```
-    ros2 launch kmr_simulation gazebo.launch.py
+    ros2 launch kmr_model multi_spawn_robot_launch.py
 ```
-To drive the robot to a desired position, in another terminal source the ROS workspace and run:
-```
-    ros2 run kmr_navigation2 navigate_point.py
-```
-Then, enter the desired position in the same terminal using the keyboard.
+To set up simulations in scenarios 1,2,3,4 and 6, open the multi_spawn_robot_launch.py file and set the adecuate initial position for robot 1 and robot 1. Robot 1's yaw needs to be yaw1=-1.57079633, while robot 2's yaw need to be yaw2=0.0. Open a two new terminals and souce the ros workspace in each of them. 
 
-To make the robot follow a trajectory by giving some waypoints, in another terminal source the ROS workspace and run:
+If the algorithm with communication wants to be tested, in one terminal run:
 ```
-    ros2 run kmr_navigation2 navigate_waypoint.py
-``` 
-Then, enter the number of waypoints used for the navigation and the waypoints themselves.
+    ros2 run kmr_navigation CA_kuka1.py
+```
+and and in the other:
+```
+    ros2 run kmr_navigation CA_kuka2.py
+```
+If the algorithm without communication wants to be tested, in one terminal run:
+```
+    ros2 run kmr_navigation CAE_kuka1.py
+```
+and and in the other:
+```
+    ros2 run kmr_navigation CAE_kuka2.py
+```
 
-To change the speed, make the rubut stop, turn to the left or turn to the right, in a new terminal  source the ROS workspace and run: 
-In a new terminal, new commands can be sent to drive the robot around:
+To set up simulations in scenario 5, open the multi_spawn_robot_launch.py file and set the adecuate initial position for robot 1 and robot 1. Robot 1's yaw needs to be yaw1=3.14159265, while robot 2's yaw need to be yaw2=0.0. Open a two new terminals and souce the ros workspace in each of them. 
+
+If the algorithm with communication wants to be tested, in one terminal run:
 ```
-    ros2 run kmr_navigation2 keyboard.py
+    ros2 run kmr_navigation CA_kuka1_H.py
 ```
-After this, follow the commands that will appear on the screen.
+and and in the other:
+```
+    ros2 run kmr_navigation CA_kuka2.py
+```
+If the algorithm without communication wants to be tested, in one terminal run:
+```
+    ros2 run kmr_navigation CAE_kuka1.py
+```
+and and in the other:
+```
+    ros2 run kmr_navigation CAE_kuka2.py
 
 To change the simulation environment, open the gazebo.launch.py file, and change the variable word to the desired environment model (one of the SDF world models contained in the folder world).
 
