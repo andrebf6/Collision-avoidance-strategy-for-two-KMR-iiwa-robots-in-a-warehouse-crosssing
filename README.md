@@ -33,7 +33,7 @@ Required ROS Packages:
   
   -  kmr_navigation
 
- This package handles navigation of the KMR iiwa robot. It contains the collsion avoidance algorithms: CA\_kuka (with communication) and CAE\_kuka (without communication).
+ This package handles the navigation of the KMR iiwa robot. It contains the collsion avoidance algorithms: CA\_kuka (with communication) and CAE\_kuka (without communication).
   
  -  kmr_simulation
 
@@ -45,7 +45,7 @@ In a terminal source the ROS workspace and run:
 ```
     ros2 launch kmr_model multi_spawn_robot_launch.py
 ```
-To set up simulations in scenarios 1,2,3,4 and 6, open the multi_spawn_robot_launch.py file and set the adecuate initial position for robot 1 and robot 1. Robot 1's yaw needs to be yaw1=-1.57079633, while robot 2's yaw need to be yaw2=0.0. Open a two new terminals and souce the ros workspace in each of them. 
+To set up simulations in scenarios 1,2,3,4 and 6, open the multi_spawn_robot_launch.py file and set the adecuate initial position for robot 1 and robot 2. Robot 1's yaw needs to be yaw1=-1.57079633, while robot 2's yaw needs to be yaw2=0.0. Open two new terminals and souce the ros workspace in each of them. 
 
 If the algorithm with communication wants to be tested, in one terminal run:
 ```
@@ -64,11 +64,11 @@ and and in the other:
     ros2 run kmr_navigation CAE_kuka2.py
 ```
 
-To set up simulations in scenario 5, open the multi_spawn_robot_launch.py file and set the adecuate initial position for robot 1 and robot 1. Robot 1's yaw needs to be yaw1=3.14159265, while robot 2's yaw need to be yaw2=0.0. Open a two new terminals and souce the ros workspace in each of them. 
+To set up simulations in scenario 5, open the multi_spawn_robot_launch.py file and set the adecuate initial position for robot 1 and robot 2. Robot 1's yaw needs to be yaw1=3.14159265, while robot 2's yaw needs to be yaw2=0.0. Open two new terminals and souce the ros workspace in each of them. 
 
 If the algorithm with communication wants to be tested, in one terminal run:
 ```
-    ros2 run kmr_navigation CA_kuka1_H.py
+    ros2 run kmr_navigation CA_kuka1_EFH.py
 ```
 and and in the other:
 ```
@@ -76,11 +76,12 @@ and and in the other:
 ```
 If the algorithm without communication wants to be tested, in one terminal run:
 ```
-    ros2 run kmr_navigation CAE_kuka1.py
+    ros2 run kmr_navigation CAE_kuka1_EFH.py
 ```
 and and in the other:
 ```
     ros2 run kmr_navigation CAE_kuka2.py
+```
 
 To change the simulation environment, open the gazebo.launch.py file, and change the variable word to the desired environment model (one of the SDF world models contained in the folder world).
 
