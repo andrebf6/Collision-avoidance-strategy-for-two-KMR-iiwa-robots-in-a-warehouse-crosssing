@@ -1,4 +1,4 @@
-# Collision-avoidance-strategy-for-two-KMR-iiwa-robots-in-a-warehouse-crosssing
+# Collision avoidance strategy for two KMR iiwa robots in a warehouse crossing
 
 ## 1. Description
 Repository containing software developed by Andrea Bravo Forn, as part of a final degree project in engineering physics performed at Federico II University (Naples, June 2021).
