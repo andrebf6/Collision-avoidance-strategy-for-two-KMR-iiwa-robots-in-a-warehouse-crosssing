@@ -3,7 +3,7 @@
 ## 1. Description
 Repository containing the software developed by Andrea Bravo Forn, as part of a bachelor degree thesis in Engineering Physics performed at the University of Naples Federico II (June 2021).
 
- <img align="left" width="300" height="200" src="https://user-images.githubusercontent.com/81975803/123519429-8b509d80-d6ab-11eb-9c3a-39ad059278b4.jpg">
+ <img align="left" width="290" height="200" src="https://user-images.githubusercontent.com/81975803/123519429-8b509d80-d6ab-11eb-9c3a-39ad059278b4.jpg">
  
 This thesis on AGV fleed management lays within the framework of the European project ICOSAF. Its aim was to design, implement and test a distributed collision avoidance strategy for two KMR iiwa robots operating in a known, grid-like structured, smart warehouse. 
 
