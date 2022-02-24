@@ -1,7 +1,7 @@
 # Collision avoidance strategy for two KMR iiwa robots in a warehouse crossing
 
 ## 1. Description
-Repository containing the software developed by Andrea Bravo Forn, as part of a bachelor degree thesis in Engineering Physics performed at the University of Naples Federico II (June 2021).
+Repository containing the software developed by Andrea Bravo Forn as part of her Bachelor Degree Thesis in Engineering Physics. This project was performed at the University of Naples Federico II, in the Nonlinear Systems, Networks and Control research group (SINCRO), and presented at the Universitat Politècnica de Catalunya (UPC) in June 2021.
 
  <img align="left" width="280" height="170" src="https://user-images.githubusercontent.com/81975803/123519429-8b509d80-d6ab-11eb-9c3a-39ad059278b4.jpg">
  
